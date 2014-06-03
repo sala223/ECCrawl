@@ -1,0 +1,20 @@
+project.ext.set('sourceCompatibility',JavaVersion.VERSION_1_6)
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+	
+repositories {
+    mavenCentral()
+} 
+	
+dependencies {
+	compile "net.sourceforge.htmlunit:htmlunit:2.15"
+	compile "org.slf4j:slf4j-log4j12:1.7.5"
+}
+	 
+eclipse {
+	classpath{
+		defaultOutputDir=new File(project.buildDir.path+'/target')
+	}
+}
+
